@@ -76,11 +76,20 @@ pip install flake8
     "python.linting.enabled": true,
     "python.linting.lintOnSave": true
     ```
+4. Standardise settings between `black` and `flake8` add the following to a `setup.cfg` file in the root of the project
+    ```
+    [flake8]
+    max-line-length = 88
+    max-complexity = 18
+    select = B,C,E,F,W,T4,B9
+    ignore = E203, E266, E501, W503, F403, F401
+    ```
 
 ### Further Reading
 
 1. [Flake8 Extensions](https://github.com/DmytroLitvinov/awesome-flake8-extensions)
 2. [Linting Python in VS Code](https://code.visualstudio.com/docs/python/linting)
+3. [Standardisation of Black and Flake8](https://medium.com/staqu-dev-logs/keeping-python-code-clean-with-pre-commit-hooks-black-flake8-and-isort-cac8b01e0ea1)
 
 ## Static Type Checking
 
