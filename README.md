@@ -39,6 +39,25 @@ pip install black
 1. [Consistent Python code with Black](https://www.mattlayman.com/blog/2018/python-code-black/)
 2. [VS Code Setup Instructions](https://code.visualstudio.com/docs/python/editing#_formatting)
 
+## Linting
+Linting highlights syntactical and stylistic problems in your Python source code, which oftentimes helps you identify and correct subtle programming errors or unconventional coding practices that can lead to errors.
+
+### Installation
+
+```
+pip install flake8
+```
+
+### Configure VS Code
+
+
+
+### Further Reading
+
+1. [Flake8 Extensions](https://github.com/DmytroLitvinov/awesome-flake8-extensions)
+2. [Linting Python in VS Code](https://code.visualstudio.com/docs/python/linting)
+
+
 
 ## Resources
 
