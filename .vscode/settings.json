@@ -9,5 +9,6 @@
     "python.linting.flake8Enabled": true,
     "python.linting.lintOnSave": true,
     "python.linting.mypyEnabled": true,
-    "python.linting.mypyArgs": []
+    "python.linting.mypyArgs": [],
+    "python.testing.pytestEnabled": true
 }
