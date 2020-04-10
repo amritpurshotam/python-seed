@@ -103,6 +103,11 @@ pip install mypy
 1. Open Setting with `Ctrl+,` and click the Workspace tab.
 2. Search `python.linting.mypyEnabled` and enable by clicking the checkbox
 
+## Issues
+
+1. Configuration is mixed between `setup.cfg` and `.vscode/settings.json` files
+2. Need to find a way to manage dev and prod dependencies i.e. the linting, formatting, type checking, etc tools are not needed to actually run the code in a production environment. Pipenv seems to solve this but need to investigate further
+
 ## Resources
 
 * [Nine simple steps for better-looking python code](https://towardsdatascience.com/nine-simple-steps-for-better-looking-python-code-87e5d9d3b1cf)
