@@ -4,7 +4,7 @@ from src.helper import increment
 
 
 class TestHelper(unittest.TestCase):
-    def test_increment(self):
+    def test_increment(self) -> None:
         expected = 2
         actual = increment(1)
 
