@@ -63,7 +63,17 @@ pip install flake8
 1. [Flake8 Extensions](https://github.com/DmytroLitvinov/awesome-flake8-extensions)
 2. [Linting Python in VS Code](https://code.visualstudio.com/docs/python/linting)
 
+## Static Type Checking
 
+### Installation
+```
+pip install mypy
+```
+
+### Configure VS Code
+
+1. Open Setting with `Ctrl+,` and click the Workspace tab.
+2. Search `python.linting.mypyEnabled` and enable by clicking the checkbox
 
 ## Resources
 
