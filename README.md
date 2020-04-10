@@ -43,15 +43,14 @@ pip install black
         "source.organizeImports": true
     }
     ```
-2. Since `black` and `isort` have different formatting rules which will [conflict](https://github.com/microsoft/vscode-python/issues/6933) with each other, add the following lines to the `.vscode/settings.json` file as well
+2. Since `black` and `isort` have different formatting rules which will [conflict](https://sourcery.ai/blog/python-best-practices/) with each other, add the following lines to the `setup.cfg` file
     ```
-    "python.sortImports.args": [
-        "--multi-line=3",
-        "--trailing-comma",
-        "--force-grid-wrap=0",
-        "--use-parentheses",
-        "--line-width=88",
-    ]
+    [isort]
+    multi_line_output=3
+    include_trailing_comma=True
+    force_grid_wrap=0
+    use_parentheses=True
+    line_length=88
     ```
 
 ### Further Reading
