@@ -35,6 +35,25 @@ pip install black
 2. Search `python.formatting.provider` and select `black` from the dropdown menu.
 3. Then search `editor.formatOnSave` and enable by clicking the checkbox.
 
+#### Sorting Imports on Save
+
+1. Add the following lines to the `.vscode/settings.json` file
+    ```
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    }
+    ```
+2. Since `black` and `isort` have different formatting rules which will [conflict](https://github.com/microsoft/vscode-python/issues/6933) with each other, add the following lines to the `.vscode/settings.json` file as well
+    ```
+    "python.sortImports.args": [
+        "--multi-line=3",
+        "--trailing-comma",
+        "--force-grid-wrap=0",
+        "--use-parentheses",
+        "--line-width=88",
+    ]
+    ```
+
 ### Further Reading
 1. [Consistent Python code with Black](https://www.mattlayman.com/blog/2018/python-code-black/)
 2. [VS Code Setup Instructions](https://code.visualstudio.com/docs/python/editing#_formatting)
