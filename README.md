@@ -50,7 +50,13 @@ pip install flake8
 
 ### Configure VS Code
 
-
+1. Open Setting with `Ctrl+,` and click the Workspace tab.
+2. Search `python.linting.flake8Enabled` and enable by clicking the checkbox.
+3. The next two settings are defaults but to ensure the project uses it regardless of a users settings, add the following lines in the `.vscode/settings.json` file.
+    ```
+    "python.linting.enabled": true,
+    "python.linting.lintOnSave": true
+    ```
 
 ### Further Reading
 
