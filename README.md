@@ -105,8 +105,7 @@ pip install mypy
 
 ## Areas to Improve
 
-1. Configuration is mixed between `setup.cfg` and `.vscode/settings.json` files
-2. Need to find a way to manage dev and prod dependencies i.e. the linting, formatting, type checking, etc tools are not needed to actually run the code in a production environment. Pipenv seems to solve this but need to investigate further
+1. Need to find a way to manage dev and prod dependencies i.e. the linting, formatting, type checking, etc tools are not needed to actually run the code in a production environment. Pipenv seems to solve this but need to investigate further
 
 ## Resources
 
