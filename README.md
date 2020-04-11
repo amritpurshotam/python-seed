@@ -112,7 +112,12 @@ pip install mypy
 
 1. [Using Python with GitHub Actions](https://help.github.com/en/actions/language-and-framework-guides/using-python-with-github-actions)
 
+## Pre-Commit Hooks
+
+Mention how to add a new hook and to run it against all files
+
 ## Resources
 
 * [Nine simple steps for better-looking python code](https://towardsdatascience.com/nine-simple-steps-for-better-looking-python-code-87e5d9d3b1cf)
 * [Python Best Practices](https://sourcery.ai/blog/python-best-practices/)
+* [Collection of git hooks by Mpho Mphego](https://blog.mphomphego.co.za/blog/2019/10/03/Why-you-need-to-stop-using-Git-Hooks.html)
