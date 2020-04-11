@@ -52,6 +52,12 @@ pip install black
     use_parentheses=True
     line_length=88
     ```
+3. To make VS Code [read](https://github.com/microsoft/vscode-python/issues/5840#issuecomment-497321419) from this config, add the following to the `.vscode/settings.json` file.
+    ```
+    "python.sortImports.args": [
+        "--settings-path=${workspaceFolder}/setup.cfg"
+    ],
+    ```
 
 ### Further Reading
 1. [Consistent Python code with Black](https://www.mattlayman.com/blog/2018/python-code-black/)
