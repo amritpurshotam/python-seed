@@ -106,6 +106,12 @@ pip install mypy
 
 1. Need to find a way to manage dev and prod dependencies i.e. the linting, formatting, type checking, etc tools are not needed to actually run the code in a production environment. Pipenv seems to solve this but need to investigate further
 
+## Continuous Integration with Github Actions
+
+### Further Reading
+
+1. [Using Python with GitHub Actions](https://help.github.com/en/actions/language-and-framework-guides/using-python-with-github-actions)
+
 ## Resources
 
 * [Nine simple steps for better-looking python code](https://towardsdatascience.com/nine-simple-steps-for-better-looking-python-code-87e5d9d3b1cf)
