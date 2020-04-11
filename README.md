@@ -1,3 +1,7 @@
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+![Continous Integration Checks](https://github.com/amritpurshotam/python-seed/workflows/Continous%20Integration%20Checks/badge.svg)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+
 # python-seed
 
 Seed project implementing Python best practices with setup instructions. This is mainly for VS Code users.
@@ -18,8 +22,6 @@ python -m pip install --upgrade pip
 3. Set it to `.\env\Scripts\python.exe`
 
 ## Formatter
-
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 Formatting makes code easier to read by human beings by applying specific rules and conventions for line spacing, indents, spacing around operators, and so on. Formatting doesn't affect the functionality of the code itself.
 
