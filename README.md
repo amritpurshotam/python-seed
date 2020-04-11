@@ -1,5 +1,5 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-![Continous Integration Checks](https://github.com/amritpurshotam/python-seed/workflows/Continous%20Integration%20Checks/badge.svg)
+![build](https://github.com/amritpurshotam/python-seed/workflows/build/badge.svg)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 
 # python-seed
