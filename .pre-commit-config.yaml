@@ -23,6 +23,8 @@ repos:
     -   id: check-merge-conflict
     -   id: requirements-txt-fixer
     -   id: debug-statements
+    -   id: trailing-whitespace
+    -   id: end-of-file-fixer
 
 -   repo: https://github.com/pre-commit/pygrep-hooks
     rev: v1.5.1
