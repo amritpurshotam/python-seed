@@ -112,6 +112,13 @@ pip install mypy
 1. Open Setting with `Ctrl+,` and click the Workspace tab.
 2. Search `python.linting.mypyEnabled` and enable by clicking the checkbox
 
+## Security
+
+Bandit installation instructions
+
+### Further Reading
+1. [Safety](https://github.com/pyupio/safety)
+
 ## Areas to Improve
 
 1. Need to find a way to manage dev and prod dependencies i.e. the linting, formatting, type checking, etc tools are not needed to actually run the code in a production environment. Pipenv seems to solve this but need to investigate further
