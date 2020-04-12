@@ -72,6 +72,7 @@ Linting highlights syntactical and stylistic problems in your Python source code
 
 ```
 pip install flake8
+pip install flake8-bugbear
 ```
 
 ### Configure VS Code
@@ -86,10 +87,10 @@ pip install flake8
 4. Standardise settings between `black` and `flake8` add the following to a `setup.cfg` file in the root of the project
     ```
     [flake8]
-    max-line-length = 88
-    max-complexity = 18
-    select = B,C,E,F,W,T4,B9
-    ignore = E266, E501, W503
+    max-line-length=80
+    max-complexity = 10
+    select = B,B9,C,E,F,W
+    ignore = E203, E501, W503
     ```
 
 ### Further Reading
@@ -97,6 +98,7 @@ pip install flake8
 1. [Flake8 Extensions](https://github.com/DmytroLitvinov/awesome-flake8-extensions)
 2. [Linting Python in VS Code](https://code.visualstudio.com/docs/python/linting)
 3. [Standardisation of Black and Flake8](https://medium.com/staqu-dev-logs/keeping-python-code-clean-with-pre-commit-hooks-black-flake8-and-isort-cac8b01e0ea1)
+4. [Flake8 Rules](https://www.flake8rules.com/)
 
 ## Static Type Checking
 
