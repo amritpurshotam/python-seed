@@ -9,7 +9,7 @@ Seed project implementing Python best practices with setup instructions. This is
 ## Virtual Environment
 
 ### Installation
-```
+```cmd
 py -3.6 -m venv env
 .\env\Scripts\activate
 python -m pip install --upgrade pip
@@ -27,7 +27,7 @@ Formatting makes code easier to read by human beings by applying specific rules 
 
 ### Installation
 
-```
+```cmd
 pip install black
 ```
 
@@ -40,13 +40,13 @@ pip install black
 #### Sorting Imports on Save
 
 1. Add the following lines to the `.vscode/settings.json` file
-    ```
+    ```json
     "editor.codeActionsOnSave": {
         "source.organizeImports": true
     }
     ```
 2. Since `black` and `isort` have different formatting rules which will [conflict](https://sourcery.ai/blog/python-best-practices/) with each other, add the following lines to the `setup.cfg` file
-    ```
+    ```ini
     [isort]
     multi_line_output=3
     include_trailing_comma=True
@@ -55,7 +55,7 @@ pip install black
     line_length=88
     ```
 3. To make VS Code [read](https://github.com/microsoft/vscode-python/issues/5840#issuecomment-497321419) from this config, add the following to the `.vscode/settings.json` file.
-    ```
+    ```json
     "python.sortImports.args": [
         "--settings-path=${workspaceFolder}/setup.cfg"
     ],
@@ -70,7 +70,7 @@ Linting highlights syntactical and stylistic problems in your Python source code
 
 ### Installation
 
-```
+```cmd
 pip install flake8
 pip install flake8-bugbear
 ```
@@ -80,18 +80,29 @@ pip install flake8-bugbear
 1. Open Setting with `Ctrl+,` and click the Workspace tab.
 2. Search `python.linting.flake8Enabled` and enable by clicking the checkbox.
 3. The next two settings are defaults but to ensure the project uses it regardless of a users settings, add the following lines in the `.vscode/settings.json` file.
-    ```
+    ```json
     "python.linting.enabled": true,
     "python.linting.lintOnSave": true
     ```
 4. Standardise settings between `black` and `flake8` add the following to a `setup.cfg` file in the root of the project
-    ```
+    ```ini
     [flake8]
     max-line-length=80
     max-complexity = 10
     select = B,B9,C,E,F,W
     ignore = E203, E501, W503
     ```
+
+### Error Codes
+
+A0: flake8-builtins
+2B,B9 flake8-bugbear
+C mccabe
+C4 flake8-comprehensions
+E
+F pyflakes
+S flake8-bandit, bandit
+W
 
 ### Further Reading
 
