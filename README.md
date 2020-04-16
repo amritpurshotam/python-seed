@@ -144,6 +144,11 @@ Bandit installation instructions
 
 Mention how to add a new hook and to run it against all files
 
+## Extensions
+
+### Further Reading
+[Workspace Recommended Extensions](https://code.visualstudio.com/docs/editor/extension-gallery#_workspace-recommended-extensions)
+
 ## Resources
 
 * [Nine simple steps for better-looking python code](https://towardsdatascience.com/nine-simple-steps-for-better-looking-python-code-87e5d9d3b1cf)
