@@ -15,7 +15,7 @@ def get_requirements(requirements_path: str):
 
 setup(
     name="pythonseed",
-    packages=find_packages(include=["src"]),
+    packages=find_packages(include=["pythonseed"]),
     version="1.0.0",
     description="",
     author="",

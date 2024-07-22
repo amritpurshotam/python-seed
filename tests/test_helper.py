@@ -1,6 +1,6 @@
 import unittest
 
-from src.helper import increment
+from pythonseed.helper import increment
 
 
 class TestHelper(unittest.TestCase):
