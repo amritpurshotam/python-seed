@@ -1,9 +1,10 @@
 {
-  "editor.formatOnSave": true, 
+  "editor.formatOnSave": true,
   "black-formatter.importStrategy": "fromEnvironment",
   "editor.codeActionsOnSave": {
     "source.organizeImports": "explicit"
   },
+  "flake8.importStrategy": "fromEnvironment",
   "isort.args": ["--settings-path=pyproject.toml"],
   "isort.importStrategy": "fromEnvironment",
   "python.testing.pytestEnabled": true,
