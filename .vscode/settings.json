@@ -1,17 +1,10 @@
 {
-    "python.pythonPath": ".\\env\\Scripts\\python.exe",
-    "python.formatting.provider": "black",
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-        "source.organizeImports": true
-    },
-    "python.sortImports.args": [
-        "--settings-path=${workspaceFolder}/setup.cfg"
-    ],
-    "python.linting.enabled": true,
-    "python.linting.flake8Enabled": true,
-    "python.linting.lintOnSave": true,
-    "python.linting.mypyEnabled": true,
-    "python.linting.mypyArgs": [],
-    "python.testing.pytestEnabled": true
+  "editor.formatOnSave": true, 
+  "black-formatter.importStrategy": "fromEnvironment",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+  "isort.args": ["--settings-path=pyproject.toml"],
+  "isort.importStrategy": "fromEnvironment",
+  "python.testing.pytestEnabled": true,
 }
