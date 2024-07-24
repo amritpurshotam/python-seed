@@ -9,7 +9,7 @@ def bugbear_error():
         for i, j in zip(list1, list2):  # show squiggly under zip for bugbear error
             print(i, j)
     except:  # show squiggly under except
-        print("bugbear")
+        print('bugbear')
 
 
 def test_mypy(x: str):

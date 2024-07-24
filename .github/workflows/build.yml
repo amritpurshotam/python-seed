@@ -47,6 +47,7 @@ jobs:
     - name: Linting and formatting
       run: |
         ruff check --output-format=github .
+        ruff format --check .
 
     - name: Static Type Check with mypy
       run: |

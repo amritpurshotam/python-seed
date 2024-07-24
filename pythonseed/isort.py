@@ -1,10 +1,6 @@
-import math
-import os
+from pythonseed.helper import increment
 import re
 
-from pythonseed.helper import increment
 
-os.rename()
 re.findall()
-math.acos()
 increment(2)

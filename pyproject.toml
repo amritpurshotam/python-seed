@@ -13,6 +13,7 @@ select = [
     "D",   # flake8-doctsrings. Checks for docstring conventions
     "E",   # pycodestyle check for pep8 style convention errors
     "F",   # flake8 error codes
+    "I",   # import sorting
     "N",   # pep8-naming checks for naming conventions
     "S",   # flake8-bandit for finding common security issues
     "W",   # pycodestyle to check for pep8 style convention warnings
