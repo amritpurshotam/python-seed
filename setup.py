@@ -7,8 +7,7 @@ from setuptools import find_packages, setup
 def get_requirements(requirements_path: str):
     with pathlib.Path(requirements_path).open() as requirements_txt:
         requirements = [
-            str(requirement)
-            for requirement in pkg_resources.parse_requirements(requirements_txt)
+            str(requirement) for requirement in pkg_resources.parse_requirements(requirements_txt)
         ]
     return requirements
 
