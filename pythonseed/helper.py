@@ -10,3 +10,7 @@ def bugbear_error():
             print(i, j)
     except:  # show squiggly under except
         print("bugbear")
+
+
+def test_mypy(x: str):
+    increment(x)  # show squiggly under x

@@ -4,13 +4,12 @@
 
 	// List of extensions which should be recommended for users of this workspace.
 	"recommendations": [
-		"ms-python.isort",
 		"ms-python.vscode-pylance",
 		"twixes.pypi-assistant",
 		"ms-python.python",
-		"ms-python.black-formatter",
-		"ms-python.flake8",
-		"tamasfe.even-better-toml"
+		"tamasfe.even-better-toml",
+		"charliermarsh.ruff",
+		"ms-python.mypy-type-checker"
 		
 	],
 	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.
