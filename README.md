@@ -8,13 +8,40 @@ Seed project implementing Python best practices with setup instructions. This is
 
 ## Virtual Environment
 
-### Installation on Windows
+### Installation of Python
 
-Make sure you're using python 3.11.9
+Install `pyenv-win` by following instructions [here](https://github.com/pyenv-win/pyenv-win) or `pyenv` on Mac with `brew install pyenv`.
+
+To install and activate your desired version of python, run the following in the project workspace (here we use 3.11.9)
+
+```
+pyenv install 3.11.9
+pyenv local 3.11.9
+pyenv exec python -m venv .venv
+
+.\.venv\Scripts\activate.ps1 # Windows
+source ./.venv/bin/activate # Mac
+```
+
+To find the exact version use the following example (for e.g. we're looking for the latest version of python 3.11).
+
+```
+pyenv install -l | select-string 3.11 # Windows
+pyenv install -l | grep 3.11 # Mac
+```
+
+In case the version you're looking for is missing make sure to run
+
+```
+pyenv update # Windows
+brew upgrade pyenv # Mac
+```
+
+### Installation of project
+
+Make sure you're using python 3.11.9 in your virtual environment and it's activated.
 
 ```cmd
-python -m venv .venv
-.\.venv\Scripts\activate.ps1
 python -m pip install --upgrade pip setuptools wheel
 pip install -e .[dev,test]
 ```
@@ -23,97 +50,36 @@ After the first command VS Code should ask if you want to activate that environm
 The following lines make sure you've activated your environment in your powershell command line as well where
 you then install the project.
 
-## Formatter
+## Formatting and Linting
 
 Formatting makes code easier to read by human beings by applying specific rules and conventions for line spacing, indents, spacing around operators, and so on. Formatting doesn't affect the functionality of the code itself.
-
-### Installation
-
-```cmd
-pip install black
-```
-
-### Configure VS Code
-
-1. Open Settings with `Ctrl+,` and click the Workspace tab.
-2. Search `python.formatting.provider` and select `black` from the dropdown menu.
-3. Then search `editor.formatOnSave` and enable by clicking the checkbox.
-
-#### Sorting Imports on Save
-
-1. Add the following lines to the `.vscode/settings.json` file
-   ```json
-   "editor.codeActionsOnSave": {
-       "source.organizeImports": true
-   }
-   ```
-2. Since `black` and `isort` have different formatting rules which will [conflict](https://sourcery.ai/blog/python-best-practices/) with each other, add the following lines to the `setup.cfg` file
-   ```ini
-   [isort]
-   multi_line_output=3
-   include_trailing_comma=True
-   force_grid_wrap=0
-   use_parentheses=True
-   line_length=88
-   ```
-3. To make VS Code [read](https://github.com/microsoft/vscode-python/issues/5840#issuecomment-497321419) from this config, add the following to the `.vscode/settings.json` file.
-   ```json
-   "python.sortImports.args": [
-       "--settings-path=${workspaceFolder}/setup.cfg"
-   ],
-   ```
-
-### Further Reading
-
-1. [Consistent Python code with Black](https://www.mattlayman.com/blog/2018/python-code-black/)
-2. [VS Code Setup Instructions](https://code.visualstudio.com/docs/python/editing#_formatting)
-
-## Linting
 
 Linting highlights syntactical and stylistic problems in your Python source code, which oftentimes helps you identify and correct subtle programming errors or unconventional coding practices that can lead to errors.
 
 ### Installation
 
 ```cmd
-pip install flake8
-pip install flake8-bugbear
+pip install ruff
 ```
 
 ### Configure VS Code
 
-1. Open Setting with `Ctrl+,` and click the Workspace tab.
-2. Search `python.linting.flake8Enabled` and enable by clicking the checkbox.
-3. The next two settings are defaults but to ensure the project uses it regardless of a users settings, add the following lines in the `.vscode/settings.json` file.
-   ```json
-   "python.linting.enabled": true,
-   "python.linting.lintOnSave": true
-   ```
-4. Standardise settings between `black` and `flake8` add the following to a `setup.cfg` file in the root of the project
-   ```ini
-   [flake8]
-   max-line-length=80
-   max-complexity = 10
-   select = B,B9,C,E,F,W
-   ignore = E203, E501, W503
-   ```
+Make sure to install the ruff extension then set the following in the `.vscode/settings.json`
 
-### Error Codes
-
-A0: flake8-builtins
-2B,B9 flake8-bugbear
-C mccabe
-C4 flake8-comprehensions
-E
-F pyflakes
-S flake8-bandit, bandit
-W
-
-### Further Reading
-
-1. [Flake8 Extensions](https://github.com/DmytroLitvinov/awesome-flake8-extensions)
-2. [Linting Python in VS Code](https://code.visualstudio.com/docs/python/linting)
-3. [Standardisation of Black and Flake8](https://medium.com/staqu-dev-logs/keeping-python-code-clean-with-pre-commit-hooks-black-flake8-and-isort-cac8b01e0ea1)
-4. [Flake8 Rules](https://www.flake8rules.com/)
+```json
+{
+  "[python]": {
+    "editor.formatOnSave": true, // format code on save
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit", // will automatically fix errors if it can
+      "source.organizeImports": "explicit" // sort imports on save
+    },
+    "editor.defaultFormatter": "charliermarsh.ruff" // format with ruff
+  },
+  "ruff.importStrategy": "fromEnvironment", // use the version of ruff in the venv
+  "ruff.organizeImports": true
+}
+```
 
 ## Static Type Checking
 
@@ -125,36 +91,19 @@ pip install mypy
 
 ### Configure VS Code
 
-1. Open Setting with `Ctrl+,` and click the Workspace tab.
-2. Search `python.linting.mypyEnabled` and enable by clicking the checkbox
+Install the `mypy` vs code extension then set the following
 
-## Security
-
-Bandit installation instructions
-
-### Further Reading
-
-1. [Safety](https://github.com/pyupio/safety)
-
-## Areas to Improve
-
-1. Need to find a way to manage dev and prod dependencies i.e. the linting, formatting, type checking, etc tools are not needed to actually run the code in a production environment. Pipenv seems to solve this but need to investigate further
+```json
+{
+  "mypy-type-checker.importStrategy": "fromEnvironment"
+}
+```
 
 ## Continuous Integration with Github Actions
 
 ### Further Reading
 
 1. [Using Python with GitHub Actions](https://help.github.com/en/actions/language-and-framework-guides/using-python-with-github-actions)
-
-## Pre-Commit Hooks
-
-Mention how to add a new hook and to run it against all files
-
-## Extensions
-
-### Further Reading
-
-[Workspace Recommended Extensions](https://code.visualstudio.com/docs/editor/extension-gallery#_workspace-recommended-extensions)
 
 ## Resources
 

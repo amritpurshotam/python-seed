@@ -1,11 +1,18 @@
 {
-  "editor.formatOnSave": true,
-  "black-formatter.importStrategy": "fromEnvironment",
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": "explicit"
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit",
+    },
+    "editor.defaultFormatter": "charliermarsh.ruff",
   },
-  "flake8.importStrategy": "fromEnvironment",
-  "isort.args": ["--settings-path=pyproject.toml"],
-  "isort.importStrategy": "fromEnvironment",
+  "ruff.importStrategy": "fromEnvironment",
+  "ruff.organizeImports": true,
+  "python.testing.pytestArgs": [
+    "tests"
+  ],
+  "python.testing.unittestEnabled": false,
   "python.testing.pytestEnabled": true,
+  "mypy-type-checker.importStrategy": "fromEnvironment"
 }
